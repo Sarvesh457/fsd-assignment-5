@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Style Sheet -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main {
+            background-image: linear-gradient(to right bottom, #f5f0e6, #e8dcb1, #d8c6a7, #c2a68a, #ab8c5e, #9a7450, #8a6141, #794e31, #6a3f22, #5b2e18, #4a1d10, #3a0d00);
+            width: 100vw;
+            height: 100vh;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        h1 {
+            padding: 20px 0;
+            font-size: 2.5rem;
+            font-family: 'Lora', serif;
+        }
+
+        .box {
+            width: 60%;
+            max-height: 80%;
+            margin: auto;
+            display: flex;
+            border-radius: 1rem;
+            border: 1px solid #9d060e;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            background-color: #fff;
+            overflow: hidden;
+        }
+
+        .left {
+            width: 50%;
+            padding: 2rem;
+            overflow-y: auto;
+        }
+
+        .right {
+            width: 50%;
+            padding: 2rem;
+            background: url('guitar-vintage.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 0 1rem 1rem 0;
+        }
+
+        .class h2 {
+            font-size: 2rem;
+            font-family: 'Lora', serif;
+        }
+
+        button {
+            background-color: #6c000d;
+            color: #ffffff;
+            border: none;
+            border-radius: 1rem;
+            padding: 0.5rem 1rem;
+            margin: 0.5rem;
+            font-family: 'Roboto', sans-serif;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ff667d;
+        }
+
+        label {
+            line-height: 2rem;
+            font-size: 16px;
+            display: block;
+            margin: 0.5rem 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        input, textarea {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            font-size: 16px;
+            padding: 0.5rem;
+            line-height: 1.5rem;
+            border: 1px solid #680028;
+            border-radius: 0.5rem;
+            background: #fff;
+            width: 100%;
+        }
+
+        ::placeholder {
+            color: #888;
+            opacity: 0.8;
+        }
+
+        .gender-sect {
+            display: flex;
+            align-items: center;
+            margin: 1rem 0;
+        }
+
+        .gender-options {
+            display: flex;
+            align-items: center;
+        }
+
+        .gender-options input {
+            margin: 0 0.5rem;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="box">
+            <div class="left">
+                <h1>Pune Metro Card Registration Form</h1>
+                <form action="">
+                    <label for="fname">First Name</label>
+                    <input type="text" name="fname" id="fname" placeholder="Sarvesh" required><br>
+
+                    <label for="lname">Last Name</label>
+                    <input type="text" name="lname" id="lname" placeholder="Mahajan" required><br>
+
+                    <label for="email">Email Id</label>
+                    <input type="email" name="email" id="email" placeholder="Sarvesh@abc.com" required><br>
+
+                    <label for="contact">Phone Number</label>
+                    <input type="tel" name="contact" id="contact" placeholder="+91 9999999999" required><br>
+
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" name="dob" id="dob"><br>
+
+                    <label for="age">Age</label>
+                    <input type="number" name="age" id="age" min="0" max="100"><br>
+
+                    <div class="gender-sect">
+                        <label for="gender">Gender</label>
+                        <div class="gender-options">   
+                            <input type="radio" name="gender" id="male" value="male"> Male
+                            <input type="radio" name="gender" id="female" value="female"> Female
+                        </div>
+                    </div>
+
+                    <label for="edu">Education</label>
+                    <input type="text" name="edu" id="edu" placeholder="Graduate"><br>
+
+                    <label for="address">Home Address:</label>
+                    <textarea name="address" id="address" rows="2" cols="20"></textarea><br>
+
+                    <div class="btn">
+                        <button type="reset">Reset Form</button>
+                        <button type="submit">Submit Form</button>
+                    </div>
+                </form>
+            </div>
+            <div class="right"></div>
+        </div>
+    </div>
+</body>
+
+</html>
